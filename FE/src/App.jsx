@@ -1,35 +1,81 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+    <main>
+      <header>
+        <a href="" className="logo">
+          MyBlog
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <nav>
+          <a href="">Login</a>
+          <a href="">Register</a>
+        </nav>
+      </header>
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRemKmk_VwTJ3FI_DD4a7IC30-WF1NqrLm11A&s"
+            alt=""
+          />
+        </div>
+        <div className="text">
+          <h2>Full-house battery backup coming later this year</h2>
+          <p className="info">
+            <a className="author">Trinh Quang Lam</a>
+            <time datetime="">2023-01-06 16:45</time>
+          </p>
+          <p className="summary">
+            Today ai its special launch event, home backup power giant EcoFlow
+            launched a flurry of new products. including a "Whole-home Backup
+            Power Solution"
+          </p>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRemKmk_VwTJ3FI_DD4a7IC30-WF1NqrLm11A&s"
+            alt=""
+          />
+        </div>
+        <div className="text">
+          <h2>Full-house battery backup coming later this year</h2>
+          <p className="info">
+            <a className="author">Trinh Quang Lam</a>
+            <time datetime="">2023-01-06 16:45</time>
+          </p>
+          <p className="summary">
+            Today ai its special launch event, home backup power giant EcoFlow
+            launched a flurry of new products. including a "Whole-home Backup
+            Power Solution"
+          </p>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRemKmk_VwTJ3FI_DD4a7IC30-WF1NqrLm11A&s"
+            alt=""
+          />
+        </div>
+        <div className="text">
+          <h2>Full-house battery backup coming later this year</h2>
+          <p className="info">
+            <a className="author">Trinh Quang Lam</a>
+            <time datetime="">2023-01-06 16:45</time>
+          </p>
+          <p className="summary">
+            Today ai its special launch event, home backup power giant EcoFlow
+            launched a flurry of new products. including a "Whole-home Backup
+            Power Solution"
+          </p>
+        </div>
+      </div>
+    </main>
+  );
 }
 
-export default App
+export default App;
