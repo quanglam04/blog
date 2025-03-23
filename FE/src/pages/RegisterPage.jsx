@@ -6,7 +6,7 @@ export default function RegisterPage() {
 
   async function register(event) {
     event.preventDefault();
-    await fetch("http://localhost:4000", {
+    await fetch("http://localhost:4000/register", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
