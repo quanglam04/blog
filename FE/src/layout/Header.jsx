@@ -14,6 +14,14 @@ export default function Header() {
       });
     });
   }, []);
+
+  const logout = async () => {
+    await fetch("http://localhost:4000/logout", {
+      credentials: "include",
+      method: "POST",
+    });
+    setUsername(null);
+  };
   return (
     <header>
       <Link to="/" className="logo">
@@ -23,7 +31,9 @@ export default function Header() {
         {username && (
           <>
             <Link to="/create">Create new post</Link>
-            <a href="">Logout</a>
+            <a onClick={logout} href="">
+              Logout
+            </a>
           </>
         )}
         {!username && (
