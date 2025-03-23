@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   async function register(event) {
     event.preventDefault();
@@ -14,9 +16,14 @@ export default function RegisterPage() {
     });
     if (response.status === 200) {
       alert("Registration successfull");
+      setRedirect(true);
     } else {
       alert("Registration failed");
     }
+  }
+
+  if (redirect) {
+    return <Navigate to={"/login"} />;
   }
   return (
     <form className="register" onSubmit={register}>
