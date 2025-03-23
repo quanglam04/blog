@@ -8,7 +8,7 @@ export default function Header() {
       </Link>
       <nav>
         <Link to="/login">Login</Link>
-        <Link href="/register">Register</Link>
+        <Link to="/register">Register</Link>
       </nav>
     </header>
   );
