@@ -21,7 +21,7 @@ export default function LoginPage() {
   };
 
   if (redirect) {
-    return <Navigate to={"/"} />;
+    window.location.href = "/";
   }
   return (
     <form className="login" onSubmit={login}>
